@@ -25,13 +25,15 @@ with DAG(
     catchup=False,
 ) as dag:
 
+    # Fixed: Changed task_1_id to task_id
     task_1 = PythonOperator(
-        task_1_id='print_hello_task',
+        task_id='print_hello_task',
         python_callable=print_hello,
     )
 
+    # Fixed: Changed task_task_id to task_id
     task_2 = PythonOperator(
-        task_task_id='print_context_task',
+        task_id='print_context_task',
         python_callable=print_context,
     )
 
